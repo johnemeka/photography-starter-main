@@ -55,14 +55,16 @@ const CursorProvider = ({ children }) => { // Rename the component to CursorProv
     }
   }
 
+
+      // mouse leave handler
+      const mouseLeaveHandler = () =>{
+        setCursorBG('default');
+      }
      // mouse enter handler
      const mouseEnterHandler = () =>{
       setCursorBG('text');
     }
-    // mouse leave handler
-    const mouseLeaveHandler = () =>{
-      setCursorBG('default');
-    }
+
 
   return (
     <CursorContext.Provider value={{cursorVarients, cursorBG, mouseEnterHandler, mouseLeaveHandler}}>
